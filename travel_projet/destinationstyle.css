@@ -1,0 +1,142 @@
+/* CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: white;
+    color: #555;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 200px;
+}
+
+nav {
+    margin-top: 20px;
+    background-color: rgb(15, 106, 224);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.hero {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgb(15, 106, 224);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.destinations {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.destinations h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.destination img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; 
+}
+
+.destination img:hover {
+    transform: scale(1.1); 
+}
+
+.destination h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+.destination p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    background-color: rgb(15, 106, 224);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

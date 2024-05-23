@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header img {
+    max-width: 200px;
+}
+
+nav {
+    margin-top: 20px;
+    background-color: rgb(15, 106, 224);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+header {
+    background-color: white;
+    color: #555;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+.destination-details {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.destination-details img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.destination-details h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: black;
+}
+
+.destination-details p {
+    font-size: 16px;
+    color: rgb(15, 106, 224);
+    margin-bottom: 20px;
+}
+
+.destination-details h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: red;
+}
+
+.reservation-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reservation-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: rgb(15, 106, 224);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

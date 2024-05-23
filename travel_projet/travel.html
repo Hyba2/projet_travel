@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Travel</title>
+    <link rel="stylesheet" href="travelstyle.css">
+    <style>
+       
+        .profile-picture {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+       
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .signup-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo1122.jpg" alt="Logo Travel" class="logo">
+            
+            <div class="profile-picture">
+                
+                <img id="profileImg" src="placeholder.jpg" alt="Profile Picture" onclick="document.getElementById('fileInput').click()">
+            </div>
+            
+            <input type="file" id="fileInput" style="display: none" onchange="previewFile()">
+           
+           
+            <a href="sign_in.up.html" class="signup-btn">Sign In / Sign Up</a>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="reservation.html">Réserver</a></li>
+                <li><a href="Apropos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <a href="rome.html"><img src="rcrsm.jpg" alt="Rome"></a>
+        <a href="Paris.html"><img src="prcslr.jpg" alt="Paris"></a>
+        <a href="kech.html"><img src="crmrch.webp" alt="Marrakech"></a>
+        <a href="tokyo.html"><img src="tcsly.jpg" alt="Tokyo"></a>
+        <a href="york.html"> <img src="ncrsyr.jpg" alt="New York"></a>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-heading">Explorez le monde avec Travel</h1>
+            <p class="hero-text">Découvrez les destinations les plus fascinantes et créez des souvenirs inoubliables.</p>
+            <a href="destination.html" class="btn">Explorer les Destinations</a>
+        </div>
+    </section>
+
+    <div class="carousel">
+        <a href="Paris.html"><img src="P11.webp" alt="Paris"></a>
+        <a href="tokyo.html"><img src="T44.jpg" alt="Tokyo"></a>
+        <a href="kech.html"><img src="MRKC.jpg" alt="Marrakech"></a>
+        <a href="york.html"> <img src="N55.jpg" alt="New York"></a>
+        <a href="rome.html"><img src="R33.jpg" alt="Rome"></a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Travel. </p>
+        </div>
+    </footer>
+
+    <script>
+        function previewFile() {
+            var preview = document.getElementById('profileImg');
+            var file    = document.getElementById('fileInput').files[0];
+            var reader  = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "placeholder.jpg";
+            }
+        }
+    </script>
+
+</body>
+</html>

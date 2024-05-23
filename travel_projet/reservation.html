@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Travel</title>
+    <link rel="stylesheet" href="reservationstyle.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo1122.jpg" alt="Logo Travel">
+            <nav>
+                <ul>
+                    <li><a href="travel.html">Accueil</a></li>
+                    <li><a href="destination.html">Destination</a></li>
+                    <li><a href="Apropos.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="reservation-details">
+            <div class="container">
+                <h2>Réservez votre voyage</h2>
+                <form id="reservation-form">
+                    <label for="name">Nom complet :</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Téléphone :</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="destination">Destination :</label>
+                    <select id="destination" name="destination" required>
+                        <option value="" disabled selected>Choisir une destination</option>
+                        <option value="Paris">Paris, France</option>
+                        <option value="Tokyo">Tokyo, Japon</option>
+                        <option value="Marrakech">Marrakech, Maroc</option>
+                        <option value="NewYork">New York, États-Unis</option>
+                        <option value="Rome">Rome, Italie</option>
+                    </select>
+                    <label for="departure">Date de départ :</label>
+                    <input type="date" id="departure" name="departure" required>
+                    <label for="payment-method">Méthode de paiement :</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="" disabled selected>Choisir une méthode de paiement</option>
+                        <option value="Carte de crédit">Carte de crédit</option>
+                        <option value="Virement bancaire">Virement bancaire</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Espèces">Espèces</option>
+                    </select>
+                    <div id="payment-details" style="display: none;">
+                        <label for="card-number">Numéro de carte de crédit :</label>
+                        <input type="text" id="card-number" name="card-number" required>
+                        <label for="cvv">CVV :</label>
+                        <input type="text" id="cvv" name="cvv" required>
+                        <label for="expiration-date">Date d'expiration de la carte :</label>
+                        <input type="text" id="expiration-date" name="expiration-date" required>
+                    </div>
+                    <div class="additional-info">
+                        <label for="additional-info">Informations supplémentaires :</label>
+                        <textarea id="additional-info" name="additional-info" rows="4" placeholder="Préférences alimentaires, besoins spéciaux, etc."></textarea>
+                    </div>
+                    <button type="submit">Réserver</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Travel.</p>
+        </div>
+    </footer>
+    <script>
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const paymentDetailsDiv = document.getElementById('payment-details');
+        const form = document.getElementById('reservation-form');
+
+        paymentMethodSelect.addEventListener('change', function () {
+            if (this.value === 'Carte de crédit') {
+                paymentDetailsDiv.style.display = 'block';
+            } else {
+                paymentDetailsDiv.style.display = 'none';
+            }
+        });
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            let formData = new FormData(form);
+            console.log('Form Data Submitted:', Object.fromEntries(formData.entries()));
+            alert('Réservation soumise avec succès!');
+        });
+    </script>
+</body>
+</html>
